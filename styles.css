@@ -1,0 +1,354 @@
+:root {
+  --note-width: 478px;
+}
+
+body {
+  background-image: url(assets/images/sunrise2.jpg);
+  background-repeat: no-repeat;
+  min-height: 1500px;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Amatic SC', cursive !important;
+}
+
+@media screen and (max-width: 532px) {
+  header {
+    margin-top: 0;
+  }
+
+  .note-form {
+    position: relative;
+    top: 15%;
+  }
+
+  #toDoList {
+    grid-template-columns: auto;
+    left: 18%;
+  }
+}
+
+@media screen and (min-width: 532px) and (max-width: 768px) {
+  header {
+    margin-top: 0;
+  }
+
+  .note-form {
+    position: relative;
+    top: 9%;
+  }
+
+  #toDoList {
+    grid-template-columns: auto;
+    left: 18%;
+  }
+}
+
+@media screen and (min-width: 620px) and (max-width: 800px) {
+  #toDoList {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  header {
+    margin-top: 1%;
+  }
+
+  .note-form {
+    position: relative;
+    top: 8%;
+  }
+
+  #toDoList {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1200px) {
+  #toDoList {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  #toDoList {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1826px) {
+  #toDoList {
+    grid-template-columns: repeat(5, auto);
+  }
+}
+
+@media screen and (min-width: 1826px) {
+  #toDoList {
+    grid-template-columns: repeat(6, auto);
+  }
+}
+
+header .glow {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  color: #009fff;
+  font-size: 50px;
+  font-family: 'Blaka', cursive;
+  margin-top: 3%;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #cefaff, 0 0 20px #00c5ff, 0 0 30px #009fff, 0 0 40px #009fff, 0 0 50px #009fff, 0 0 60px #009fff, 0 0 70px #009fff;
+  }
+
+  to {
+    text-shadow: 0 0 30px #cefaff, 0 0 40px #009fff, 0 0 50px #00dfff, 0 0 60px #00dfff, 0 0 70px #00dfff, 0 0 80px #00dfff, 0 0 90px #00dfff;
+  }
+}
+
+.note-form {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-image: url(assets/images/motor-computer.jpg);
+  background-repeat: no-repeat;
+  width: var(--note-width);
+  height: 284px;
+  margin-top: 8%;
+  border-radius: 130px 130px 52px 52px;
+}
+
+
+#titleBox {
+  background-color: var(--bs-black);
+  margin: 3% 18% 0;
+  width: 300px;
+  border-radius: 20px;
+  border-color: var(--bs-orange);
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--bs-info);
+}
+
+#descriptionBox {
+  margin: 2px 18% 0;
+  background-image: url(assets/images/textarea.jpg);
+  width: 300px;
+  border-radius: 16px;
+  border-color: var(--bs-orange);
+  line-height: 1;
+  color: var(--bs-light);
+}
+
+.color-palette {
+  margin-top: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.color-btn {
+  display: inline-block;
+  margin-top: 0;
+  height: 15px;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.btn-check:checked+.btn {
+  border-color: var(--bs-info) !important;
+  border-width: 2px;
+}
+
+.red {
+  background-color: red !important;
+}
+
+.orange {
+  background-color: orange !important;
+}
+
+.yellow {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+.green {
+  background-color: green !important;
+}
+
+.blue {
+  background-color: blue !important;
+}
+
+.purple {
+  background-color: purple !important;
+}
+
+.magenta {
+  background-color: magenta !important;
+}
+
+.date-and-time {
+  margin: 22px 30% 0;
+}
+
+.date {
+  border-radius: 10px;
+  border-color: var(--bs-orange);
+}
+
+.time {
+  margin: 0 0 2% 10%;
+  border-radius: 10px;
+  border-color: var(--bs-orange);
+}
+
+.form-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 32px;
+  background-color: var(--bs-gray-500);
+  border: 2px solid var(--bs-orange);
+  border-radius: 28px;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--bs-light);
+  cursor: pointer;
+}
+
+.btn-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: var(--bs-body-font-family);
+  align-items: center;
+  padding-bottom: 19%;
+}
+
+.add {
+  left: 28px;
+}
+
+.reset {
+  right: 28px;
+}
+
+#validateOn {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  cursor: pointer !important;
+}
+
+#validateText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 70px;
+  color: var(--bs-info);
+  transform: translate(-50%, -50%);
+}
+
+#toDoList {
+  display: grid;
+  gap: 0.7em;
+  position: absolute;
+  top: 62%;
+}
+
+.note-card {
+  width: 18rem;
+  margin-left: 9%;
+  max-width: 18rem;
+  max-height: 18rem;
+  background-color: var(--bs-light);
+  font-family: 'Amatic SC', cursive;
+  color: var(--bs-light);
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  animation: fadeIn 3s;
+  transition: opacity 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.removed {
+  opacity: 0;
+}
+
+/* custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bs-info);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+.push-pin {
+  height: 3rem;
+  position: relative;
+  left: 25%;
+  top: 0;
+}
+
+.close,
+.edit {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.close {
+  left: 16rem;
+}
+
+.note-card:hover .close {
+  color: black !important;
+}
+
+.edit {
+  left: 13rem;
+}
+
+.note-card:hover .edit {
+  color: black !important;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Blaka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <title>My Task Board</title>
+</head>
+
+<body>
+    <header>
+        <div class="title glow">My Task Board</div>
+    </header>
+    <div class="note-form">
+        <textarea cols="20" rows="1" placeholder="Title" id="titleBox" class="fs-2"></textarea>
+        <textarea cols="20" rows="6" placeholder="Description" id="descriptionBox" class="fs-4"></textarea>
+
+        <div class="btn-toolbar color-palette" role="toolbar">
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check color-btn red" name="btnRadio" id="redBtnRadio"
+                    value="red"></input>
+                <label class="btn red" for="redBtnRadio"></label>
+            </div>
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check color-btn orange" name="btnRadio" id="orangeBtnRadio"
+                    value="orange"></input>
+                <label class="btn orange" for="orangeBtnRadio"></label>
+            </div>
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check color-btn yellow" name="btnRadio" id="yellowBtnRadio"
+                    value="yellow"></input>
+                <label class="btn yellow" for="yellowBtnRadio"></label>
+            </div>
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check color-btn green" name="btnRadio" id="greenBtnRadio"
+                    value="green"></input>
+                <label class="btn green" for="greenBtnRadio"></label>
+            </div>
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check color-btn blue" name="btnRadio" id="blueBtnRadio"
+                    value="blue"></input>
+                <label class="btn blue" for="blueBtnRadio"></label>
+            </div>
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check color-btn purple" name="btnRadio" id="purpleBtnRadio"
+                    value="purple"></input>
+                <label class="btn purple" for="purpleBtnRadio"></label>
+            </div>
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check color-btn magenta" name="btnRadio" id="magentaBtnRadio"
+                    value="magenta"></input>
+                <label class="btn magenta" for="magentaBtnRadio"></label>
+            </div>
+        </div>
+
+        <div class="date-and-time">
+            <input type="date" class="date text-bg-dark" min="01-01-3000"
+                onfocus="this.min=new Date().toISOString().split('T')[0]" id="dateBox">
+            <input type="time" class="time text-bg-dark" id="timeBox">
+        </div>
+
+        <div class="form-btn add" title="Add" onclick="add()">
+            <div class="btn-text">+</div>
+        </div>
+        <div class="form-btn reset" title="Reset" type="reset" onclick="reset()">
+            <div class="btn-text">-</div>
+        </div>
+    </div>
+    <div id="validateOn" onclick="off()">
+        <div id="validateText"></div>
+    </div>
+    <div id="toDoList">
+    </div>
+
+</body>
+
+</html>
