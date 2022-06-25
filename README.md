@@ -4,5 +4,5 @@ My To Do List project.
 ```
 git clone https://github.com/nunuf/to-do-list.git
 ```
-## Run;
+## Run
 https://nunuf.github.io/to-do-list
