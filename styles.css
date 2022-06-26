@@ -11,6 +11,39 @@ body {
   background-size: cover;
   font-family: 'Amatic SC', cursive !important;
 }
+@media screen and (min-width: 360px) and (min-height: 740px) {    /* samsung s8+*/
+  header {
+    margin-top: 0;
+  }
+
+  .note-form {
+    position: relative;
+    width: 360px !important;
+    top: 20% !important;
+  }
+  #titleBox {
+    margin: 3% 15% 0;
+    width: 245px !important;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--bs-info);
+  }
+  #descriptionBox {
+    margin: 2px 18% 0;
+    background-image: url(assets/images/textarea.jpg);
+    width: 250px !important;
+  }
+  .date-and-time {
+    margin: 40px 20% 0 !important;
+  }
+
+  #toDoList {
+    grid-template-columns: auto;
+    top: 65% !important;
+    left: 2%;
+  }
+}
 
 @media screen and (max-width: 532px) {
   header {
