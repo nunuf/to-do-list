@@ -109,7 +109,7 @@ function displayTasks(allTasks) {
             </div>
             <img src="assets/images/thumbPin2.png" class="push-pin"/>
             <p class="text-center fs-2">${allTasks[i].title}</p>
-            <p class="text-center fs-4">${allTasks[i].description}</p>
+            <p class="text-center fs-4">${allTasks[i].description.replaceAll('\n', '<br>')}</p>
             <p class="ps-1 pb-0 fs-5 fw-bolder text-left">${allTasks[i].date.split('-').reverse().join('/')}<br> ${allTasks[i].time}</p
         </div>
         `;
@@ -122,7 +122,7 @@ function reset() {
   descriptionBox.value = "";
   dateBox.value = "";
   timeBox.value = "";
-  document.querySelector('input[name="btnRadio"]:checked').value = null;
+  document.querySelector('input[name="btnRadio"]:checked').value = "";
   location.reload();
 }
 
@@ -152,3 +152,4 @@ function editItem(button) {
   timeBox.value = taskToEdit.time;
   removeTask(allTasks, index);
 }
+

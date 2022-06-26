@@ -19,12 +19,12 @@ body {
 
   .note-form {
     position: relative;
+    width: 300px;
     top: 15%;
   }
 
   #toDoList {
     grid-template-columns: auto;
-    left: 18%;
   }
 }
 
@@ -196,7 +196,7 @@ header .glow {
 }
 
 .date-and-time {
-  margin: 22px 30% 0;
+  margin: 22px 29% 0;
 }
 
 .date {
