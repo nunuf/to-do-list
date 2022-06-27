@@ -11,41 +11,8 @@ body {
   background-size: cover;
   font-family: 'Amatic SC', cursive !important;
 }
-@media screen and (min-width: 360px) and (min-height: 740px) {    /* samsung s8+*/
-  header {
-    margin-top: 0;
-  }
 
-  .note-form {
-    position: relative;
-    width: 360px !important;
-    top: 20% !important;
-  }
-  #titleBox {
-    margin: 3% 15% 0;
-    width: 245px !important;
-    line-height: 1;
-    font-weight: 700;
-    font-size: 20px;
-    color: var(--bs-info);
-  }
-  #descriptionBox {
-    margin: 2px 18% 0;
-    background-image: url(assets/images/textarea.jpg);
-    width: 250px !important;
-  }
-  .date-and-time {
-    margin: 40px 20% 0 !important;
-  }
-
-  #toDoList {
-    grid-template-columns: auto;
-    top: 65% !important;
-    left: 2%;
-  }
-}
-
-@media screen and (max-width: 532px) {
+@media screen and (max-width: 532px) and (max-height: 500px) {
   header {
     margin-top: 0;
   }
@@ -53,11 +20,10 @@ body {
   .note-form {
     position: relative;
     width: 300px;
-    top: 15%;
   }
 
   #toDoList {
-    grid-template-columns: auto;
+    grid-template-columns: auto; 
   }
 }
 
@@ -229,7 +195,9 @@ header .glow {
 }
 
 .date-and-time {
-  margin: 22px 29% 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 65%);
 }
 
 .date {
@@ -238,7 +206,6 @@ header .glow {
 }
 
 .time {
-  margin: 0 0 2% 10%;
   border-radius: 10px;
   border-color: var(--bs-orange);
 }

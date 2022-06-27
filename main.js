@@ -152,4 +152,3 @@ function editItem(button) {
   timeBox.value = taskToEdit.time;
   removeTask(allTasks, index);
 }
-
