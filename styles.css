@@ -5,7 +5,7 @@
 body {
   background-image: url(assets/images/sunrise2.jpg);
   background-repeat: no-repeat;
-  min-height: 1500px;
+  min-height: 1144px;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -122,6 +122,9 @@ header .glow {
   border-radius: 130px 130px 52px 52px;
 }
 
+.hidden {
+  display: none;
+}
 
 #titleBox {
   background-color: var(--bs-black);
@@ -192,6 +195,34 @@ header .glow {
 
 .magenta {
   background-color: magenta !important;
+}
+
+.red-btn {
+  color: red !important;
+}
+
+.orange-btn {
+  color: orange !important;
+}
+
+.yellow-btn {
+  color: yellow !important;
+}
+
+.green-btn {
+  color: green !important;
+}
+
+.blue-btn {
+  color: blue !important;
+}
+
+.purple-btn {
+  color: purple !important;
+}
+
+.magenta-btn {
+  color: magenta !important;
 }
 
 .date-and-time {
@@ -269,18 +300,17 @@ header .glow {
   display: grid;
   gap: 0.7em;
   position: absolute;
-  top: 62%;
+  top: 59%;
 }
 
 .note-card {
   width: 18rem;
+  height: 18rem;
   margin-left: 9%;
-  max-width: 18rem;
-  max-height: 18rem;
   background-color: var(--bs-light);
   font-family: 'Amatic SC', cursive;
   color: var(--bs-light);
-  overflow-x: hidden;
+  overflow: hidden;
   overflow-wrap: break-word;
   animation: fadeIn 3s;
   transition: opacity 3s;
@@ -290,7 +320,7 @@ header .glow {
   0% {
     opacity: 0;
   }
-
+  
   100% {
     opacity: 1;
   }
@@ -298,6 +328,11 @@ header .glow {
 
 .removed {
   opacity: 0;
+}
+
+.description {
+  height: 8rem;
+  overflow-y: auto;
 }
 
 /* custom scrollbar */
